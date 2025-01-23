@@ -8,10 +8,11 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class HelloApplication extends Application {
+
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/ru/antipov/lr3task2/number_processor.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 450, 200);
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/ru/antipov/lr3task2/number-processor.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 400, 200);
         stage.setTitle("Number Processor");
         stage.setScene(scene);
         stage.show();

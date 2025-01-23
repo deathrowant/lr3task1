@@ -16,9 +16,16 @@ public class Controller {
     @FXML
     void processButtonOnAction(ActionEvent event) {
         try {
-            float number = Float.parseFloat(numberTextField.getText());
-            float result = number - 8;
+            int number = Integer.parseInt(numberTextField.getText());
+            int result;
+
+            if (number > 0) {
+                result = number - 8;
+            } else {
+                result = number;
+            }
             resultLabel.setText("Результат: " + result);
+
         } catch (NumberFormatException e) {
             resultLabel.setText("Некорректный ввод числа");
         }
